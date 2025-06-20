@@ -29,7 +29,7 @@ def handle_response(text: str)->str:
     return 'I do not understand what you wrote'
 
 async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):
-    message_type: str = upadte.message.chat.type
+    message_type: str = update.message.chat.type
     text: str = update.message.text
     print(f'User ({update.message.chat.id}) in {message_type}: "{text}"')
 
@@ -41,5 +41,5 @@ async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):
             return
     else:
             response: str =handle_response(text)
-            
-
+    print('Bot',response)
+    await update.message.reply_text(response)

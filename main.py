@@ -12,4 +12,6 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Iam Intelix ! Please type something so I can respond!')
 
 
+async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('This is a custom command')
 

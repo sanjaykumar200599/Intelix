@@ -43,3 +43,8 @@ async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):
             response: str =handle_response(text)
     print('Bot',response)
     await update.message.reply_text(response)
+
+
+#Error handling
+async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    print(f'Update {update} caused error {context.error}')

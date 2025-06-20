@@ -24,8 +24,9 @@ def handle_response(text: str)->str:
         return 'Hey there!'
     if 'how are you' in text:
         return 'Iam good!'
-    if 'I love python' in processed:
+    if 'i love python' in processed:
         return 'Remember to subscribe!'
+    
     return 'I do not understand what you wrote'
 
 async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):

@@ -33,7 +33,8 @@ async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):
     message_type: str = update.message.chat.type
     text: str = update.message.text
     print(f'User ({update.message.chat.id}) in {message_type}: "{text}"')
-
+    
+    #This if statement is used for mentioning in group
     if message_type =='group':
         if BOT_USERNAME in text:
             new_text: str = text.replace(BOT_USERNAME, '').strip()

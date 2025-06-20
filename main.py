@@ -18,4 +18,15 @@ async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 #Handle responses
+def handle_response(text: str)->str:
+    processed: str = text.lower()
+    if 'hello' in text:
+        return 'Hey there!'
+    if 'how are you' in text:
+        return 'Iam good!'
+    if 'I love python' in processed:
+        return 'Remember to subscribe!'
+    return 'I do not understand what you wrote'
+
+
 

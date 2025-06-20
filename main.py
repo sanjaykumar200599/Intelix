@@ -52,5 +52,7 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 if __name__=='__main__':
     app=Application.builder().token(TOKEN).build()
     #commands
-    
+
     app.add_handler(CommandHandler('start',start_command))
+    app.add_handler(CommandHandler('help',help_command))
+    app.add_handler(CommandHandler('custom',custom_command))

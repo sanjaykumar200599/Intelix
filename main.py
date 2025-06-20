@@ -48,3 +48,8 @@ async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):
 #Error handling
 async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(f'Update {update} caused error {context.error}')
+
+if __name__=='__main__':
+    app=Application.builder().token(TOKEN).build()
+    app.add_handler(CommandHandler('start',start_command))
+    

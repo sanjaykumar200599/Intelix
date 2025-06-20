@@ -28,5 +28,10 @@ def handle_response(text: str)->str:
         return 'Remember to subscribe!'
     return 'I do not understand what you wrote'
 
-async def handle_message(update: Update, )
+async def handle_message(update: Update,context:ContextTypes.DEFAULT_TYPE ):
+    message_type: str = upadte.message.chat.type
+    text: str = update.message.text
+    print(f'User ({update.message.chat.id}) in {message_type}: "{text}"')
+    
+
 

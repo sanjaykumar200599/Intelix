@@ -7,3 +7,9 @@ BOT_USERNAME:Final='@Intelix_agent_bot'
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Hello! Thanks for chatting with me! Iam a Intellix bot')
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('Iam Intelix ! Please type something so I can respond!')
+
+
+
